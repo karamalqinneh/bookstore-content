@@ -17,4 +17,14 @@ public class Book {
   private float price;
   private List<Sale> sales;
 
+  @Override
+  public String toString() {
+    return "Book{" +
+            "id='" + id + '\'' +
+            ", name='" + name + '\'' +
+            ", author='" + author + '\'' +
+            ", price=" + price +
+            ", sales=" + sales +
+            '}';
+  }
 }
