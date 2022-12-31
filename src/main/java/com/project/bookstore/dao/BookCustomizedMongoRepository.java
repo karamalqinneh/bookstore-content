@@ -8,4 +8,5 @@ import java.util.Optional;
 public interface BookCustomizedMongoRepository<T, ID> {
 
   Optional<Book> findById(ID givenId);
+  List<Book> findByPrice(int price);
 }

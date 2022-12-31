@@ -40,4 +40,9 @@ public class BookController {
   public Book getSingleBookByName(@PathVariable String name) {
     return bookService.getByName(name);
   }
+
+  @GetMapping("/book/price/{price}")
+  public List<Book> getSingleBookByName(@PathVariable int price) {
+    return bookService.cheaperThan(price);
+  }
 }

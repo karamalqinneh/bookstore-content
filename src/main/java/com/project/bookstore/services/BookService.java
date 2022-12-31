@@ -38,4 +38,8 @@ public class BookService {
   public List<Book> getAllBooks() {
     return bookDAO.findAll();
   }
+
+  public List<Book> cheaperThan(int price) {
+    return bookDAO.findByPrice(price);
+  }
 }

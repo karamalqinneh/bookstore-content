@@ -20,4 +20,11 @@ public class BookCustomizedMongoRepositoryImpl<T, ID> implements BookCustomizedM
     Optional<Book> book= Optional.of(queryResult.get(0));
     return book;
   }
+
+  public List<Book> findByPrice(int price) {
+    Query query = Query.query(Criteria.where("price").lte(price));
+    List<Book> queryResult = mongoTemplate.find(query, Book.class);
+
+    return queryResult;
+  }
 }
